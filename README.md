@@ -16,7 +16,7 @@ classifier](http://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classif
 
 2. Clone this repository
 
-        git clone https://github.com/mrnugget/opencv-haar-classifier-training
+        git clone https://github.com/kayspark/opencv-haar-classifier-training
 
 3. Put your positive images in the `./positive_images` folder and create a list
 of them:
