@@ -1,0 +1,26 @@
+./live_sample/16-09-07-18-37-21-217_deco-1030x1015.jpg 4 864 11 38 62 276 205 166 184 890 345 59 72 851 733 91 58
+./live_sample/16235-2441383.jpg 1 44 13 235 166
+./live_sample/17334_7829_2753.jpg 1 196 53 59 42
+./live_sample/2757_PW166591-5CraneRecover.jpg 1 231 17 51 80
+./live_sample/2828640-01.jpg 1 247 38 31 68
+./live_sample/4-9.jpg 4 156 28 58 70 336 156 62 41 740 0 39 66 870 40 58 67
+./live_sample/Break cargo crain.jpg 1 315 33 58 45
+./live_sample/FB_IMG_1448409577778.jpg 4 530 58 69 96 444 5 80 100 726 254 49 92 824 196 64 100
+./live_sample/Liebherr-542-HC-L.jpg 2 167 91 118 44 656 24 38 63
+./live_sample/SSI_20170421154048.jpg 1 146 134 28 31
+./live_sample/The-Unique-Way-Tower-Cranes-Are-Built.jpg 2 2838 709 171 98 665 423 312 204
+./live_sample/crane-example-01.jpg 2 357 29 33 50 300 17 39 45
+./live_sample/crane-hire.jpg 1 272 16 82 90
+./live_sample/crane_operator.png 5 268 149 70 33 232 213 55 37 661 57 89 57 38 94 61 54 510 259 45 38
+./live_sample/cranes.jpg 1 58 50 192 162
+./live_sample/ct_20171027163343_C7F6B4EBC1DFB0F8BEF71463468869249.jpg 3 785 256 80 56 578 18 57 63 270 49 55 45
+./live_sample/images.jpg 1 99 15 53 51
+./live_sample/img_3675.jpg 1 716 133 112 127
+./live_sample/lake.jpg 7 901 103 143 158 1076 98 99 146 1201 98 106 153 1307 116 4 135 1311 116 117 140 1549 433 85 112 1427 297 199 105
+./live_sample/mullen ft mac.jpg 1 247 1 54 52
+./live_sample/sky28m-1.jpg 1 511 19 94 77
+./live_sample/sky4-crop.jpg 1 576 191 91 94
+./live_sample/test.png 1 885 169 121 126
+./live_sample/thumb-1794608199_HO6NItJB_dccad7488131b8fbfcff430269cb6fb43483becc_375x300.jpg 1 166 160 93 71
+./live_sample/thunder-cranes-office.jpg 1 301 2 93 147
+./live_sample/작업12--600-400.jpg 1 390 64 132 58

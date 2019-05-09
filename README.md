@@ -12,10 +12,7 @@ classifier](http://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classif
 
 1. Install OpenCV & get OpenCV source
 
-        brew tap homebrew/science
-        brew install --with-tbb opencv
-        wget http://downloads.sourceforge.net/project/opencvlibrary/opencv-unix/2.4.9/opencv-2.4.9.zip
-        unzip opencv-2.4.9.zip
+        brew install opencv
 
 2. Clone this repository
 
@@ -24,7 +21,8 @@ classifier](http://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classif
 3. Put your positive images in the `./positive_images` folder and create a list
 of them:
 
-        find ./positive_images -iname "*.jpg" > positives.txt
+        
+         find ./positive_images -iname "*.png" > positives.txt
 
 4. Put the negative images in the `./negative_images` folder and create a list of them:
 
@@ -33,13 +31,16 @@ of them:
 5. Create positive samples with the `bin/createsamples.pl` script and save them
 to the `./samples` folder:
 
-        perl bin/createsamples.pl positives.txt negatives.txt samples 1500\
-          "opencv_createsamples -bgcolor 0 -bgthresh 0 -maxxangle 1.1\
-          -maxyangle 1.1 maxzangle 0.5 -maxidev 40 -w 80 -h 40"
+        perl bin/createsamples.pl positives.txt negatives.txt samples 12000\
+          "opencv_createsamples -bgcolor 255 -bgthresh 0 -maxxangle 1.1\
+          -maxyangle 1.1 maxzangle 0.5 -w 40 -h 40"
 
 6. Use `tools/mergevec.py` to merge the samples in `./samples` into one file:
 
         python ./tools/mergevec.py -v samples/ -o samples.vec
+        
+        
+       to see the results images, : opencv_createsamples -vec samples.vec -w 40 -h 40 -show
 
    Note: If you get the error `struct.error: unpack requires a string argument of length 12`
    then go into your **samples** directory and delete all files of length 0.
@@ -48,16 +49,16 @@ to the `./samples` folder:
 OpenCV, and save the results to `./classifier`:
 
         opencv_traincascade -data classifier -vec samples.vec -bg negatives.txt\
-          -numStages 20 -minHitRate 0.999 -maxFalseAlarmRate 0.5 -numPos 1000\
-          -numNeg 600 -w 80 -h 40 -mode ALL -precalcValBufSize 1024\
-          -precalcIdxBufSize 1024
+         -numStages 20 -minHitRate 0.999 -maxFalseAlarmRate 0.2 -numPos 6000\
+         -numNeg 600 -numThreads 40 -w 40 -h 40 -mode ALL -precalcValBufSize 4096\
+         -precalcIdxBufSize 4096 
           
     If you want to train it faster, configure feature type option with LBP:
 
          opencv_traincascade -data classifier -vec samples.vec -bg negatives.txt\
-          -numStages 20 -minHitRate 0.999 -maxFalseAlarmRate 0.5 -numPos 1000\
-          -numNeg 600 -w 80 -h 40 -mode ALL -precalcValBufSize 1024\
-          -precalcIdxBufSize 1024 -featureType LBP
+          -numStages 20 -minHitRate 0.999 -maxFalseAlarmRate 0.2 -numPos 8000\
+          -numNeg 1000 -numThreads 80 -w 40 -h 40 -mode ALL -precalcValBufSize 4096\
+          -precalcIdxBufSize 4096 -featureType LBP
 
     After starting the training program it will print back its parameters and then start training. Each stage will print out some analysis as it is trained:
 

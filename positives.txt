@@ -1,0 +1,15 @@
+./positive_images/03.png
+./positive_images/02.png
+./positive_images/06.png
+./positive_images/07.png
+./positive_images/05.png
+./positive_images/04.png
+./positive_images/01-5.png
+./positive_images/01-4.png
+./positive_images/07-1.png
+./positive_images/01-3.png
+./positive_images/01-2.png
+./positive_images/01-1.png
+./positive_images/06-1.png
+./positive_images/02-2.png
+./positive_images/02-1.png
